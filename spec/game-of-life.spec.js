@@ -1,4 +1,4 @@
-const GameOfLife = require("../../game-of-life/src/game-of-life");
+const GameOfLife = require("../../the-game-of-life/src/game-of-life");
 
 describe("Game of Life", () => {
 
