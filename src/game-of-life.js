@@ -42,6 +42,9 @@ class GameOfLife {
         }
         return neighbourCount;
     }
+
 }
+
+
 
 module.exports = GameOfLife;

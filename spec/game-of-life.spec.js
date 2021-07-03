@@ -2,7 +2,7 @@ const GameOfLife = require("../../the-game-of-life/src/game-of-life");
 
 describe("Game of Life", () => {
 
-    describe("Scenario 0", () => {
+    describe("Scenario 0/Scenario 5", () => {
         it("should return a grid of dead cells when given a grid of dead cells", () => {
             const currentGrid = [["0", "0", "0"], ["0", "0", "0"], ["0", "0", "0"]];
             /*
@@ -79,8 +79,38 @@ describe("Game of Life", () => {
             const game = new GameOfLife();
             const result = game.play(currentGrid);
             expect(result).toEqual([["0", "1", "1"], ["0", "1", "1"], ["0", "0", "0"]]);
-        })
-    })
+        });
+    });
 
+    describe("Scenario 6 - Part 1", () => {
+        it("Game should evolve from initial state [[0,0,0],[1,1,1],[0,0,0]] to [[0,1,0],[0,1,0],[0,1,0]]", () => {
+            const currentGrid = [["0", "0", "0"], ["1", "1", "1"], ["0", "0", "0"]];
+            /*
+                ---------
+                |0||0||0|
+                |1||1||1|
+                |0||0||0|
+                ---------
+             */
+            const game = new GameOfLife();
+            const result = game.play(currentGrid);
+            expect(result).toEqual([["0", "1", "0"], ["0", "1", "0"], ["0", "1", "0"]]);
+        });
+    });
 
+    describe("Scenario 6 - Part 2", () => {
+        it("Game should evolve from state [[0,1,0],[0,1,0],[0,1,0]] to [[0,0,0],[1,1,1],[0,0,0]]", () => {
+            const currentGrid = [["0", "1", "0"], ["0", "1", "0"], ["0", "1", "0"]];
+            /*
+                ---------
+                |0||1||0|
+                |0||1||0|
+                |0||1||0|
+                ---------
+             */
+            const game = new GameOfLife();
+            const result = game.play(currentGrid);
+            expect(result).toEqual([["0", "0", "0"], ["1", "1", "1"], ["0", "0", "0"]]);
+        });
+    });
 });
