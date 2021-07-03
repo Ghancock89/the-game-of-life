@@ -1,0 +1,23 @@
+{
+  "name": "game-of-life",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jasmine"
+  },
+  "type": "commonjs",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ghancock89/game-of-life.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ghancock89/game-of-life/issues"
+  },
+  "homepage": "https://github.com/Ghancock89/game-of-life#readme",
+  "devDependencies": {
+    "jasmine": "^3.7.0"
+  }
+}
