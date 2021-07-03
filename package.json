@@ -14,9 +14,9 @@
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Ghancock89/game-of-life/issues"
+    "url": "https://github.com/Ghancock89/the-game-of-life/issues"
   },
-  "homepage": "https://github.com/Ghancock89/game-of-life#readme",
+  "homepage": "https://github.com/Ghancock89/the-game-of-life#readme",
   "devDependencies": {
     "jasmine": "^3.7.0"
   }
