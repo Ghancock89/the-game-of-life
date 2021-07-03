@@ -19,30 +19,24 @@ class GameOfLife {
             }
         }
         return newGrid;
-
     }
 
 
     getNeighbourCount(x, y, seedGrid){
         const checks = [[x-1, y-1],[x,y-1],[x+1, y-1],[x-1,y], [x+1, y],[x-1, y+1], [x, y+1], [x+1, y+1]];
         let neighbourCount = 0;
-        try{
 
-            for(let i = 0; i < checks.length; i++){
-                if(checks[i][0] > -1 && checks[i][1] > -1 && checks[i][0] < 3 && checks[i][1] < 3) {
-                    const cx = checks[i][0];
-                    const cy = checks[i][1];
-                    if (seedGrid[cx][cy] !== '0') {
-                        neighbourCount++;
-                    }
+        for(let i = 0; i < checks.length; i++){
+            if(checks[i][0] > -1 && checks[i][1] > -1 && checks[i][0] < 3 && checks[i][1] < 3) {
+                const cx = checks[i][0];
+                const cy = checks[i][1];
+                if (seedGrid[cx][cy] !== '0') {
+                    neighbourCount++;
                 }
             }
-        }catch (e) {
-
         }
         return neighbourCount;
     }
-
 }
 
 
